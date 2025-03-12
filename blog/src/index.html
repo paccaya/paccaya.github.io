@@ -1,0 +1,44 @@
+---
+title: homepage
+layout: layout/base.njk
+---
+<p class="index-quote"><i>"There is no way to peace, peace is the way."</i><br>
+— Thich Nhat Hanh</p>
+<h2 class="center">ryan chan</h2>
+<p class="time">
+  <a class="time" href="https://24timezones.com/New-Jersey/time" target="_blank"><i>New Jersey Time</i></a><span id="time"></span>
+</p>
+
+<script>
+const options = { timeZone: 'US/Eastern', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+const formatter = new Intl.DateTimeFormat([], options);
+
+setInterval(() => {
+	document.getElementById("time").innerText = formatter.format(new Date());
+}, 1000);
+</script>
+
+<div id="animation"></div>
+
+<script>
+    var n = [];
+    var colour = "#A57F60";
+
+    async function loadFrames() {
+        let response = await fetch("/files/meditation.json");
+        let data = await response.json();
+        n = data.frames;
+        play();
+    }
+
+    async function play() {
+        let i = 0;
+        while (true) {
+            document.getElementById("animation").innerHTML = `<span style="color:${colour};"><pre>${n[i]}</pre></span>`;
+            i = (i + 1) % n.length;
+            await new Promise(r => setTimeout(r, 101));
+        }
+    }
+
+    loadFrames();
+</script>

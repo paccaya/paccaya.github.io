@@ -1,0 +1,28 @@
+---
+title: now
+layout: layout/base.njk
+---
+<div class="center-align-title">
+  <h1>now</h1>
+</div>
+<h2>where to find me</h2>
+<p>New Jersey</p>
+
+<h2>what I am up to right now</h2>
+
+<h2>currrently reading</h2>
+
+<h2>current employment/occupation</h2>
+<p>Investigating the occult.</p>
+
+<div class="update-alert">
+<p><i>Last updated {{ page.date | date: "%B %d, %Y" }}.</i> This is a <a href="https://nownownow.com/about">now</a> page.</p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lastModified = new Date(document.lastModified);
+    document.getElementById("last-updated").textContent = 
+      `Last updated ${lastModified.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}.`;
+  });
+</script>
