@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Besley.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link data-href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet"><style data-href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=Waiting+for+the+Sunrise&display=swap&quot; rel=&quot;stylesheet">/* cyrillic-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGWmQSNjdsmc35JDF1K5GRweDY1ZyHKpWiGIg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGWmQSNjdsmc35JDF1K5GRweD81ZyHKpWiGIg.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGWmQSNjdsmc35JDF1K5GRweDc1ZyHKpWiGIg.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGWmQSNjdsmc35JDF1K5GRweDg1ZyHKpWiGIg.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGWmQSNjdsmc35JDF1K5GRweDQ1ZyHKpWiGIg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGWmQSNjdsmc35JDF1K5GRweDU1ZyHKpWiGIg.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGWmQSNjdsmc35JDF1K5GRweDs1ZyHKpWg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGUmQSNjdsmc35JDF1K5GR4SDk_YAPIlWk.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGUmQSNjdsmc35JDF1K5GRxSDk_YAPIlWk.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGUmQSNjdsmc35JDF1K5GR5SDk_YAPIlWk.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGUmQSNjdsmc35JDF1K5GR2SDk_YAPIlWk.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGUmQSNjdsmc35JDF1K5GR6SDk_YAPIlWk.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGUmQSNjdsmc35JDF1K5GR7SDk_YAPIlWk.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400 800;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* math */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWxU6FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqW106FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06FxZCJgvAQ.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6FxZCJgg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* math */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb54C_k3HqUtEw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Waiting for the Sunrise';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/waitingforthesunrise/v21/WBL1rFvOYl9CEv2i1mO6KUW8RKWJ2zoXoz5JsbZZ_B77YV5Iwow.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Waiting for the Sunrise';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/waitingforthesunrise/v21/WBL1rFvOYl9CEv2i1mO6KUW8RKWJ2zoXoz5JsbZX_B77YV5I.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <nav><nav>
+  <a href="/">Home</a>
+  <a href="/library">Library</a>
+  <a href="/projects">Projects</a>
+  <a href="/about">About</a>
+  <a href="/now">Now</a>
+</nav>
+</nav>
+
+      <h1>Listening empathically in an apathetic world</h1>
+      <p>Ryan Chan<span style="font-size:12px; margin-left:15px; display: inline-flex; opacity: 0.5;">
+        February 9, 2025
+      </span></p>
+
+
+      <main><link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css">
+
+<br>
+<div id="typedtext"></div>
+<a href="#note1" id="ref1" title="See full quote here.">[1]</a>
+<br>
+
+<p>To liken empathic listening to a pond: one must join the ripple of suffering with an unwavering affinity to then culminate into a downpour of compassion. Our empathy—as a testament to our neither-here-nor-there-ness or more simply how one's self cannot exist without an 'other'—is only as bounded as you believe yourself truly to be separate from another. </p>
+
+<p>This article will serve as a challenge to you to reflect on whether you actually understand how to empathically listen.</p>
+
+<p>In our noise-filled world, whether it be light pollution that drowns out the stars, sound pollution that keeps you from sleep, waste pollution that you willfully ignore, or simply the humdrum of neverending thoughts, we seem to be overbearingly pelted by stimuli. We maintain a fickle appearance of hyperconnectivity through the Internet  with our friends, family, and acquiantances only  a few flicks away. In spite of this, we also find ourselves in what is a loneliness epidemic: dealing with a pervasive senses of anxiety, alienation, isolation, dis-ease, and worry because of the disconnect of online and in-person interactions.</p>
+
+<p>So in order to understand empathetic listening, one must understand what <i>empathy</i> means. From the <a href="https://www.etymonline.com/word/empathize">Online Etymology Dictionary</a>, roots of empathize and empathy are given:</p>
+
+<blockquote>
+    <b><i>empathize </i></b>(v.)<br>
+    "understand and share the feelings of another," by 1917, from empathy + -<i>ize</i>. <br>Related: Empathized; empathizing.<br>
+    <b><i>empathy</i></b> (n)<br>
+    1908, modeled on German Einfühlung (from ein "in" + Fühlung "feeling"), which was coined 1858 by German philosopher Rudolf Lotze (1817-1881) as a translation of Greek empatheia "passion, state of emotion," from assimilated form of en "in" (see en- (2)) + pathos "feeling" (from PIE root *kwent(h)- "to suffer"). A term from a theory of art <b>appreciation that maintains appreciation depends on the viewer's ability to project his personality into the viewed object.</b>
+</blockquote>
+
+<p>Through this example we find there are roots of empathy that means the ability for the viewer to project his personality into the viewed object, thus self-identifying with something that we usually say is <i>other</i> to us. Moreover, something even more remarkable about the origin is its Greek stem <i>pathos</i> which describes <i>to suffer</i> which relates to the Latin roots of compassion: <i>-passio meaning to suffer</i> paired with the prefix, <i>com-</i>, meaning together. In essence, compassion is <i>suffering with</i>. This is what differentiates empathetic listening to any other sort of listening: empathetic listening is based upon compassion or the allowance of another's perspective to enmesh into ours. We feel alone even though we hold the entire world inside our pockets. Could it be that we feel alone because of how Internet use has a greater precedence than our close relationships? That we spend more time engaging with the Internet in order to disengage, forget, and ignore our present circumstances or is it something deeper? Could it be that we have forgotten the language that connects more than disconnects: the language of emotion and unmet needs that undergirds conversations?</p>
+
+<p>What makes empathetic listening differ from commensense listening? First, we must understand that the way in which we commonly listen instead acts as a barrier to truly opening into another's experience. To take from Dr. Marshall B. Rosenburg's <i>Non-violent Communication: A Language of Life</i>, he outlines the barriers to empathetic listening:</p>
+
+<h3 id="figure1">Figure 1</h3>
+<blockquote>My friend Holley Humphrey identified some common behaviors that prevent us from being sufficiently present to connect empathetically with others. The following are examples:
+<ul>
+<li>Advising: "I think you should ..." "How come you didn't ...?"</li>
+<li>One-upping: "That's nothing; wait'll you hear what happened to me."</li>
+<li>Educating: "This could turn into a very positive experience for you if you just ..."</li>
+<li>Consoling: "It wasn't your fault; you did the best you could."</li>
+<li>Story-telling: "This reminds me of the time ..."</li>
+<li>Shutting down: "Cheer up. Don't feel so bad."</li>
+<li>Sympathizing: "Oh, you poor thing ..."</li>
+<li>Interrogating: "When did this begin?"<a href="#note2" id="ref2" title="Nonviolent Communication: a Language of Life, Marshall B. Rosenburg, PhD">[2]</a></li></ul>
+</blockquote>
+
+<p>One might be familiar with these responses, as not many people understand or even consider other options when it comes to receiving another human being. So how might these well-intentioned responses that we often use block empathy instead of invite it? There must be some sort of response given to another person in order to allow the conversation to go deeper in order to acquiesce the tension in the air, right? Well, a fitting aphorism that fits our puzzle of listening can be attributed here:</p>
+
+<blockquote>
+    "The road to hell is paved with good intentions."
+</blockquote>
+
+<p>Though on the surface-level these responses seem well-intentioned, what one may realize, if they had not already envisioned themselves in a thought experiment, are that these responses actually <b><i>block</i></b> empathy, connection, and compassion by putting the cart in front of the horse. We assume that this is what another person needs from us, and we may not even allow them to process their own emotions by talking over their suffering. Think of those people who enjoy giving commetnary over your favorite movie, how would you enjoy that if someone filtered your emotions through this type of commentary? Dr. Rosenburg goes into this further:</p>
+
+<blockquote>
+    Intellectual understanding blocks empathy.<br>
+    [...]<br>
+    When we are thinking about people's words and listening to how they connect to our theories, we are looking at people [through the lens of our assumptions, concepts, and words]—we are not with them.
+<a href="#note3" id="ref3" title="Nonviolent Communication: a Language of Life, Marshall B. Rosenburg, PhD">[3]</a>
+</blockquote>
+
+
+<p>Often times, these modes of thought (<a href="#figure1">Figure 1</a>) are normalized due to our embracing of rationality which alienates others, thus isolating both parties. By attempting to fit this scenario into <b>one's own theory, life experience, and overlaying their emotions with assumptions of their underlying needs and desires, you do the complete opposite of what you are intending.</b> This objectifies the other person by disconnecting yourself from their naked emotions by creating a barricade of thoughts, concepts, and abstractions which separate your 'self' from your perceived 'other'. </p>
+
+<p>There is an air of tension, thus when one finds that the atmosphere of tension has acquiesced, disintegrates, and blank, one finds that sharing pain heals that exact pain. Remit</p>
+
+<p>To introduce a new way of understanding listening, let's journey back to Dr. Rosenburg once again who provided another fitting defintion for empathy in the context of empathic listening:</p>
+<blockquote><b>Empathy</b>: emptying our mind and listening with our whole being.<a href="#note4" id="ref4" title="Nonviolent Communication: a Language of Life, Marshall B. Rosenburg, PhD">[4]</a></blockquote>
+
+<p>At first glance, one may think after reading these behaviors that these are, in fact, healing and helpful ways of interacting with someone suffering, but that is not the case for an empathic listener or nonviolent communicator (NVCer). The subtlety that we often disregard is that the moment one partakes in any of the above behaviors (<a href="#figure1">Figure 1</a>), you <b><i>dehumanize</i></b> and <b><i>disempower</i></b> the other person's deeper emotional needs and desires through completely well-intentioned assumptions.</p>
+
+<p>Without being willing to fully unfold into the present moment with compassionate, our existence becomes shrouded in contraction: we mentally and thus physically cower into intellectualization, analysis or simply any distraction that will act as a barrier towards emotional turmoil. Physically, this may manifest as a tightness or stiffness in one's body, averting one's eye contact, or simply gazing at or interacting with a person in way that distances from rather than co-mingles with.</p>
+
+<p>This comes back to the value of presence that we often lack nowadays: we are constantly looking for the escape hatch, the quick fix, and subverting and repressing our emotions by using our technological 'advanced' devices. We are constantly seeking something other than what we are experiencing now. We look at the homeless and look at them with pity rather than taking action. We look to the forests and remove ourselves from the appaling facts of deforestation and loss of biodiversity since we see it as out of our hands. When we look at something horrific, see it so vividly that we recede from being fully there, we condone what happens NOT because we feel powerless in the face of it but because we don't allow our emotions to arise then and there. To apply this to empathic listening, when we look at someone in pain and subvert their pain by shriveling up in one's me, myself, and I, we condone <b><i>un</i></b>listening, literal and figurative deafness.</p>
+
+<h3>Compassion compliments empathy</h3>
+
+<p>To look back on history, sound science has never been convincing enough for people to empathetically listen and to take the adequate action to prevent illness, disease, and suffering. It is only when we are affected so virulently, so relentlessly personally that the problem arrives at our doorstep in which we take action. It is only when we drop the shell of our ego in which we open into the world that we listen to a naked calling.</p>
+
+<p>Receving anothers feelings through the bounds of an <i>ego</i> or '<i>self</i>' is akin to fighting fire with fire: one doesn't listen by acting as a faucet and spouting out things that one's <i>ego</i>, inner critic, or the isolated, judging observer is already so capable of (see <a href="#figure1">Figure 1</a> for a reminder). However, it is by healing anothers emotional wounds by simply letting them out: <i>to suffer with</i>, which is what it means to compassionate (Latin <i>com-</i> and <i>pati</i>, meaning to bear or suffer and also to permit or allow). <i>Ego</i> is fundamentally treated only through non-<i>ego</i> since once the emotional cloud has passed: the person is thus healed. In a less abstract sense, receiving empathetically is allowing oneself to be an extension of another person; to find security outside the trap of the isolated, egotistic mind. Instead of the typical formula of a psychiatrist prescribing medicine to a mentally ill person, a professional empathic listener or NVCer would to attend to another's emotional needs so closely that the exchange would go something like this: Receving another as if they were a gift rather than a problem, burden, or even an 'other'.</p>
+
+<p>"So you're "</p>
+
+<p>In an even more limpid fashion, there is a Buddhist saying often attributed to Thich Nhat Hanh:</p>
+<blockquote>"Often we tell ourselves, 'Don't just sit there, do something!' But when we practice awareness [In this case, empathetically listening], we discover that the opposite may be more helpful: <b>'Don't just do something, sit there!'</b><a href="#note5" id="ref5" title="Nonviolent Communication: a Language of Life, Marshall B. Rosenburg, PhD">[5]</a></blockquote>
+
+
+<p>This brings up to our next and point: <b>ask before offering advice or reassurance.</b> </p>
+
+<p>However much we love to play the psychiatrist, digging out deeper causes, and constructing rationalizations and theories, by doing so we attend to the detached observer (thus apathetic) part of ourselves that is caught up in its attachment to personal views. This blinds one's understanding and the validity of another personal's underlying emotional needs not being met. Whenever we retreat into the observer binded by our personal philosophy, logic, storyline, and fantasy, we completely sever ourself by assuming that they require that part of ourselves. This could be called speaking <i>over</i> or listening <i>over</i> someone's naked being, in which we start to dress the other person with our personal clothes of views, perceptions, and advice. By always asking the question; "Why?" in response to our emotions, we postpone them by trying to attribute them to a pedigree. Instead of pathologizing and attempting to step back from our emotions as a silent observer, we neither engage or disengage but truly feel it in its essence. We include our complete feeling, transition from having emotion to being an emotion, so that every ounce of our body is included.</p>
+
+<p>The next step of empathetic listening is the verbal, mutual confirmation of understanding. Quite literally the 'ability to understand the feelings of another' part of empathy. One of the best ways to carry this out is reflecting back what the other person says by listening to underlying unfulfilled desires and needs beyond what they outwardly announce.</p>
+
+<p>Nonviolent commuication, in this case empathetic listening, suggests that paraphrasing another's thoughts and feelings will allow the other party more time to dig deeper into their conscience and reflect on what they've said while also allowing the listener to confirm their understanding and elicit any necessary corrections from the speaker.</p>
+
+<p>Note*: This is particularly different than simply stating: "I understand you.", "I know where you're coming from.", or "I can relate." insert link to quote about understanding with wife and husband diagreement</p>
+
+<p>There are two forms (there may be numerous other forms but these are the two main categories) of these paraphrasing questions: questions that divide and questions that connect. Questions that divide are often posed in the way of interrogation, in which the receiver feels like they are corresponding with an out-of-touch school teacher or a psychotherapist working on a case. Here is an example of such question:</p>
+
+<blockquote>
+    1. "What did I do that you are referring to?"<br>
+    2. "How are you feeling?" "Why are you feeling that way?"<br>
+    3. "What are you wanting me to do about it?"
+</blockquote>
+
+<h3>Examples of Requests versus Demands</h3>
+<blockquote>
+When the other person hears a demand from us, they see two options to submit or to rebel.
+To tell if it's a demand or request, observe what the speaker does if the request is not complied with.
+It's a demand if the speaker criticizes or judges.
+It's a demand if the speaker lays a guilt trip.
+It's a request if the speaker then shows empathy toward the other person's needs.
+</blockquote>
+
+
+<p>We live in a dangerous society when most, if not all, when our listening ears have been equipped with pathologizing, misunderstanding, assuming, and pushing away rather than bringing near: perhaps as an outgrowth of our increasingly boxy, isolated, and alienating ways of living. That any brief mention of one’s repressed feelings, thoughts, and cries is to be relegated only to the most specialized echelon of therapists, psychiatrists, counselors, and psychotherapists.</p>
+
+<p>'Climate induced anxiety' or 'eco-anxiety' has only been formally recognized quite recently (enter statistic), which tell an exact tale of how backwards our society is. We repress, bottle uo, and ignore the probkems that seem to have no solution, as we lose our hope in a better future. We deadcat the __ whilst cognitive bias pulls us to the negative: hence, the doomscroll. (see Joanna Macy's despair work and check out Post-Doom society)</p>
+
+<p>In hindsight, after writing such long-winded article, I must admit I may have complicated empathetic listening. In reality, empathically connecting is much simpler than one may think since it requires little to no thinking; something completely natural and awfully easy to do when one sees things the right way and empties their self of objectification and embodies a deep kind of listening. What is unnatural is our approach of assumption, pathology, and projection by abiding in the minuscule   shell of our <i>ego</i> or '<i>self</i>'. By simply acting as the extension of another body or extending the premise of what one's 'self' entails, empathetic listening comes as easy as opening one's hand, as a branch intertwines to a trunk of a tree or even as you sit on this Earth, perpetually attracted to her by the forces of gravity.</p>
+
+<p>When we realize that our self has no bounds, this allows ourselves to self-identify as the entire world.</p>
+
+<p>By doing so, as the branch to someone's trunk in which a fragrant flower blooms.</p>
+
+<hr>
+<h3>Notes and Sources</h3>
+
+<dl>
+    <dt id="note1">[1]</dt>
+    <dd>Here are the full quotes:<br><blockquote>"But only someone who is open to everything, who excludes nothing, even the least explainable, will experience a living connection to others and will, from that, create his own authentic existence. For it is we who assign to our own existence a greater or lesser dimension. Take, for example, the space we inhabit: a narrow strip by the door or a spot by the window. That’s how we make things safe for ourselves. And yet a dangerous insecurity is so much more human, like the prisoners in Poe’s stories who grope along the confines of their ghastly dungeons so that no aspect of their enclosure is foreign to them. But we are not prisoners. No traps or snares are set about us. There is nothing that should terrify or torment us. Through a fortunate mimicry of our natural surroundings, we have grown so adapted to life after thousands of years that we can hardly be distinguished from the living forms around us. We have no reason to distrust our world, for it is not against us. If our world has fears, they are our fears. If it has an abyss, it belongs to us. If dangers appear, we must try to love them. And if we will live with faith in the value of what is challenging, then what seems most difficult will become our truest and most trustworthy friend. How could we forget the myths about dragons who at the last moment transform into princesses? Perhaps all the dragons of our lives are princesses waiting to see us act just once with courage. Perhaps every terror is, at its core, something helpless that wants our help."<br>—Rainer Maria Rilke, <i>Letters to a Young Poet</i> Translated by Anita Barrows and Joanna Macy</blockquote>
+<blockquote>“However much we are affected by the things of the world, however deeply they may stir and stimulate us, they become human for us only when we can discuss them with our fellows. Whatever cannot become the object of discourse - the truly sublime, the truly horrible or the uncanny - may find human voice through which to sound into the world, but it is not exactly human. We humanize what is going on in the world and in ourselves only by speaking of it, and in the course of speaking of it we learn to be human.”<br> —Hannah Arendt, <i>Men in Dark Times </i></blockquote>(<a href="#ref1">Back to text ↩︎</a>)</dd>
+    <dt id="note2">[2]</dt>
+    <dd><i>Nonviolent Communication: a Language of Life</i>, Marshall B. Rosenburg, PhD (<a href="#ref2">Back to text</a>)</dd>
+    <dt id="note3">[3]</dt>
+    <dd><i>Ibid.</i> (<a href="#ref3">Back to text</a>)</dd>
+    <dt id="note4">[4]</dt>
+    <dd><i>Ibid.</i> (<a href="#ref4">Back to text</a>)</dd>
+    <dt id="note5">[5]</dt>
+    <dd><i>Ibid.</i> (<a href="#ref5">Back to text</a>)</dd>
+</dl>
+<br>
+<div id="lastmodbox"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var aText = [
+        "Perhaps all the dragons of our lives are princesses waiting to see us act just once with courage. Perhaps, every terror is, at its core, something helpless that wants our help.",
+        "—Maria Rainer Rilke",
+        "‎ ",
+        "We humanize what is going on in the world and in ourselves by speaking of it, and in the course of speaking of it we learn to be human.",
+        "— Hannah Arendt"
+    ];
+    var iSpeed = 20; // Typing speed
+    var iPause = 1000; // Pause between lines
+    var iIndex = 0; // Current sentence index
+    var iTextPos = 0; // Current character index
+    var destination = document.getElementById("typedtext");
+
+    function typewriter() {
+        if (iIndex < aText.length) {
+            destination.innerHTML = aText.slice(0, iIndex).join("<br>") + "<br>" + aText[iIndex].substring(0, iTextPos) + "_";
+
+            if (iTextPos++ < aText[iIndex].length) {
+                setTimeout(typewriter, iSpeed);
+            } else {
+                iTextPos = 0;
+                iIndex++;
+                setTimeout(typewriter, iPause);
+            }
+        } else {
+            destination.innerHTML = aText.join("<br>"); // Remove the blinking cursor when done
+        }
+    }
+
+    typewriter();
+});
+
+var modified = document.lastModified
+const lastmodbox = document.getElementById("lastmodbox")
+
+lastmodbox.innerHTML = `Last Updated: ${modified}`
+
+
+</script>
+</main>
+    </div>
+
+    <footer><p>© <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1">CC-BY-SA-4.0</a> Ryan Chan 2025. Hosted by Github Pages. Powered by <a href="https://www.11ty.dev">11ty</a>.</p>
+</footer>
+  </body>
+</html>
