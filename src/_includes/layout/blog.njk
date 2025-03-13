@@ -17,15 +17,20 @@
 
         {% for post in collections.post %}
           <p>
-            {% if post.date %}
-              <i>{{ post.date | readableDate }}</i>
-            {% else %}
-              No date available
-            {% endif %}
-                <a href="{{ post.url }}">{{ post.data.title }}</a>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        {% if post.data.description %}
+          <br>
+          <small>{{ post.data.description }}</small>
+        {% endif %}
+        {% if post.date %}
+          <br>
+          <i class="post-date">{{ post.date | readableDate }}</i>
+        {% else %}
+          <br>
+          <i>No date available</i>
+        {% endif %}
           </p>
         {% endfor %}
-
 
       </div>
 
