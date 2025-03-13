@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Create .nojekyll file
-        run: echo > ./src/.nojekyll
+        run: echo > ./gh-pages/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
