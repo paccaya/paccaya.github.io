@@ -46,7 +46,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/js");
   eleventyConfig.addPassthroughCopy("./src/files");
-  eleventyConfig.addPassthroughCopy("**/.nojekyll");
+  eleventyConfig.addPassthroughCopy("./src/.nojekyll");
 
   return {
     passthroughFileCopy: true,
