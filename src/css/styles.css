@@ -156,12 +156,10 @@ footer {
   line-height: 1;
   text-align: center;
   color: var(--color-primary);
-  opacity: 0.2;
+  opacity: 0.5;
   text-wrap: wrap;
   pointer-events: none;
-  z-index: -1;
   font-family: 'EB Garamond';
-  font-weight: bold;
 }
 
 #typedtext {
