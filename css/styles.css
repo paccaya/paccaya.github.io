@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
 [data-theme="dark"] {
@@ -76,17 +76,17 @@ nav {
   font-family: 'EB Garamond';
   font-size: 20px;
   text-transform: lowercase;
-  color: var(--color-background);
+  color: var(--color-primary);
   display: flex;
   gap: 3rem;
 }
 
 nav:hover a {
-  color: var(--color-background);
+  color: var(--color-primary);
 }
 
 nav a {
-  color: var(--color-background);
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -109,7 +109,7 @@ footer {
 
 .center {
   margin-right: 1em;
-  color: var(--color-background);
+  color: var(--color-primary);
   font-family: EB Garamond;
   font-size: 25px;
   text-align: center;
@@ -131,7 +131,7 @@ footer {
 }
 
 .time:hover {
-  color: var(--color-background);
+  color: var(--color-primary);
 }
 
 .time {
