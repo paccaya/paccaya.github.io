@@ -1,5 +1,38 @@
 :root {
-  --bg: #fff;
+  --color-primary: #000;
+  --color-background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #fff;
+    --color-background: #000;
+  }
+}
+
+html, body {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adjust the duration as needed */
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+h1 {
+  color: var(--color-primary)
+}
+
+[data-theme="dark"] {
+  --color-primary: #fff;
+  --color-background: #000;
+  background-color: #000; /* Explicit dark background */
+  color: #fff; /* Explicit dark text color */
+}
+
+[data-theme="light"] {
+  --color-primary: #000;
+  --color-background: #fff;
 }
 
 body {
