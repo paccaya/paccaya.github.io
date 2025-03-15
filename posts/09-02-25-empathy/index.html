@@ -340,6 +340,19 @@
 }
 </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+
+    <script>
+      (function() {
+          const savedTheme = localStorage.getItem("theme");
+          if (savedTheme) {
+              document.documentElement.setAttribute("data-theme", savedTheme);
+          } else {
+              const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+              document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+          }
+      })();
+    </script>
+
   </head>
   <body>
     <div class="content-wrapper">
