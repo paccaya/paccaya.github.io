@@ -100,11 +100,19 @@ blockquote {
 footer {
   text-align: center;
   background-color: #b08442;
-  color: white;
+  color: #fff;
   bottom: 0;
   width: 100%;
   font-size: 11px;
   height: 2.5rem;
+}
+
+footer a:visited {
+    color: inherit;
+}
+
+footer a:link {
+    color: #fff;
 }
 
 .center {
@@ -160,6 +168,10 @@ footer {
   text-wrap: wrap;
   pointer-events: none;
   font-family: 'EB Garamond';
+}
+
+a:visited:not(nav a) {
+  color: blue;
 }
 
 #typedtext {
