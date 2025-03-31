@@ -23,6 +23,8 @@ body {
 [data-theme="dark"] {
   --color-primary: #FCFDF4;
   --color-background: #212A37;
+  --color-secondary: #b08442;
+  --color-surface: #314A4B;
   background-color: ##212A37; /* Explicit dark background */
   color: #FCFDF4; /* Explicit dark text color */
 }
@@ -30,6 +32,8 @@ body {
 [data-theme="light"] {
   --color-primary: #212A37;
   --color-background: #FCFDF4;
+  --color-secondary: #b08442;
+  --color-surface: #ebdeca;
 }
 
 #theme-toggle {
@@ -38,7 +42,7 @@ body {
   left: 2%;
 }
 
-/* General styles */
+/* Sitewide */
 
 body {
   overflow-wrap: break-word;
@@ -63,11 +67,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-#thay {
-  max-width: 100%;
-  height: auto;
 }
 
 html {
@@ -104,7 +103,7 @@ blockquote {
 
 footer {
   text-align: center;
-  background-color: #b08442;
+  background-color: #0F1319;
   color: #fff;
   bottom: 0;
   width: 100%;
@@ -129,16 +128,6 @@ footer a:link {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#animation {
-  font-size: 2.5px;
-  text-align: center;
-  top: 40%;
-  left: 50%;
-  position: absolute;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -176,12 +165,16 @@ footer a:link {
 }
 
 a:visited:not(nav a, .time) {
-  color: blue;
+  color: var(--color-secondary);
+}
+
+a:not(nav a, .time) {
+  color: var(--color-secondary);
 }
 
 #typedtext {
   font-family: 'Waiting for the Sunrise', cursive;
-  background-color: #ebdeca;
+  background-color: var(--color-surface);
 }
 
 .poem {
@@ -205,7 +198,7 @@ a:visited:not(nav a, .time) {
 }
 
 h1, .h1 {
-    font-size: 150%;
+    font-size: 250%;
     font-family: 'Jost';
     color: var(--color-primary);
 }
@@ -231,6 +224,13 @@ h6, .h6 {
 
 p, .p {
   font-family: 'Besley', sans-serif;
+}
+
+/* Image styling */
+
+#thay {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Footnotes */
@@ -277,3 +277,13 @@ pre.no-space {
 a.no-line:link		{ color:#FF6600; text-decoration:none; }
 a.no-line:visited 	{ color:#CC6633; text-decoration:none; }
 a.no-line:active 	{ color:#FF3300; text-decoration:underline; }
+
+#animation {
+  font-size: 2.5px;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
