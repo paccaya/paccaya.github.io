@@ -119,17 +119,16 @@ footer a:link {
     color: #fff;
 }
 
-.center {
-  margin-right: 1em;
+.homepage {
   color: var(--color-primary);
   font-family: EB Garamond;
   font-size: 25px;
-  text-align: center;
-  position: absolute;
   top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  left: 20%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -20%);
+  transform: translate(-50%, -20%);
 }
 
 .time:hover {
@@ -148,14 +147,12 @@ footer a:link {
   display: flex;
 }
 
-.index-quote {
-  position: fixed;
-  top: 53%;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.index-bottom {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 20px;
-  line-height: 1;
   text-align: center;
   color: var(--color-primary);
   opacity: 0.5;
