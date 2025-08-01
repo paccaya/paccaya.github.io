@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <pre class="ascii-symbol5">
+       __
+      /\-\
+     _||"|_
+    ~^~^~^~^
+    </pre>
+    {% include "partials/navbar.njk" %}
+    <h1 style="font-weight: normal"> {{ title }} </h1>
+    <p><span style="text-transform:uppercase">By {{ author }}</span></p>
+    {% for post in collections.post %}
+      {% if post.date %}
+        <i class="post-date">{{ post.date | readableDate }}</i>
+      {% else %}
+        <i>No date available</i>
+      {% endif %}
+    {% endfor %}
+    <main>{{ content | safe}}</main>
+
+  </body>
+</html>

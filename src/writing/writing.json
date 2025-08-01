@@ -1,0 +1,5 @@
+{
+    "layout": "base.njk",
+    "tags": ["post"],
+    "permalink": "writing/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}.html"
+}

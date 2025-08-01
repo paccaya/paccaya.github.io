@@ -1,0 +1,30 @@
+---
+title: writing
+layout: layouts/base.njk
+pagination:
+  data: collections.post
+  size: 10
+  alias: posts
+  reverse: true
+---
+<ul class="no-bullets">
+  {% for post in posts %}
+    <li>
+      <a class="text-gray-500 underline" href="{{ post.url }}">
+        {{ post.data.title }}
+      </a>
+      {% if post.data.description %}
+        <br><small>{{ post.data.description }}</small>
+      {% endif %}
+      {% if post.date %}
+        <br><i class="post-date">{{ post.date | readableDate }}</i>
+      {% else %}
+        <br><i>No date available</i>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+
+{% if pagination.previousPage %}<a href="{{ pagination.previousPage }}">Previous</a>{% endif %}
+{% if pagination.nextPage %}<a href="{{ pagination.nextPage }}">Next</a>{% endif %}
