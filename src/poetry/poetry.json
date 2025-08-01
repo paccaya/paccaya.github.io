@@ -1,5 +1,0 @@
-{
-    "layout": "base.njk",
-    "tags": ["poem"],
-    "permalink": "poetry/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}.html"
-}
