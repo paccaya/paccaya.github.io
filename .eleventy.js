@@ -7,7 +7,9 @@ module.exports = async function(eleventyConfig) {
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy hh:mm a");
+    return DateTime.fromJSDate(dateObj, { zone: "utc" })
+      .setZone("America/New_York")
+      .toFormat("dd LLL yyyy hh:mm a");
   });
 
   eleventyConfig.addPassthroughCopy("./src/css");
