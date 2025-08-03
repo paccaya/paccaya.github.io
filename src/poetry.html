@@ -6,18 +6,19 @@ pagination:
   size: 10
   alias: poems
   reverse: true
+permalink: "poetry/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html"
 ---
 <ul class="no-bullets">
-  {% for poem in poems %}
+  {% for poetry in collections.poetry %}
     <li>
-      <a class="text-gray-500 underline" href="{{ post.url }}">
-        {{ poem.data.title }}
+      <a class="text-gray-500 underline" href="{{ poem.url }}">
+        {{ poetry.data.title }}
       </a>
-      {% if poem.data.description %}
-        <br><small>{{ poem.data.description }}</small>
+      {% if poetry.data.description %}
+        <br><small>{{ poetry.data.description }}</small>
       {% endif %}
-      {% if post.date %}
-        <br><i class="post-date">{{ poem.date | readableDate }}</i>
+      {% if poetry.date %}
+        <br><i class="post-date">{{ poetry.date | readableDate }}</i>
       {% else %}
         <br><i>No date available</i>
       {% endif %}
@@ -26,5 +27,19 @@ pagination:
 </ul>
 
 
-{% if pagination.previousPage %}<a href="{{ pagination.previousPage }}">Previous</a>{% endif %}
-{% if pagination.nextPage %}<a href="{{ pagination.nextPage }}">Next</a>{% endif %}
+<nav class="pagination">
+  {% if pagination.previousPage %}
+    <a href="{{ pagination.href.previous }}">Previous</a>
+  {% endif %}
+
+  {% for pageEntry in pagination.pages %}
+    <a href="{{ pagination.hrefs[loop.index0] }}"
+       class="{% if loop.index0 == pagination.pageNumber %}active{% endif %}">
+      {{ loop.index }}
+    </a>
+  {% endfor %}
+
+  {% if pagination.nextPage %}
+    <a href="{{ pagination.href.next }}">Next</a>
+  {% endif %}
+</nav>
