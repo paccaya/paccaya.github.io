@@ -2,7 +2,7 @@
 title: poetry
 layout: layouts/base.njk
 pagination:
-  data: collections.poems
+  data: collections.poetry
   size: 10
   alias: poems
   reverse: true
@@ -11,7 +11,7 @@ permalink: "poetry/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumb
 <ul class="no-bullets">
   {% for poetry in collections.poetry %}
     <li>
-      <a class="text-gray-500 underline" href="{{ poem.url }}">
+      <a class="text-gray-500 underline" href="{{ poetry.url }}">
         {{ poetry.data.title }}
       </a>
       {% if poetry.data.description %}
