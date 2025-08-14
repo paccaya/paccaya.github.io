@@ -124,3 +124,7 @@ hr {
   font-size: 0.6em;
   pointer-events: none;
 }
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
