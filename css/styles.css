@@ -128,3 +128,23 @@ hr {
 li:not(:last-child) {
     margin-bottom: 5px;
 }
+
+td, th {
+  text-align: left;
+  padding: 7px;
+}
+
+.table-wrap {
+  width: 70vw;
+  position: relative;
+  left: 40%;
+  margin-left: calc(-50vw + 50%);
+}
+
+th {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(2n+2) {
+  background-color: #D6EEEE;
+}
