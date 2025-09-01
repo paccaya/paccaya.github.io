@@ -9,7 +9,8 @@
 
     <hr>
 
-  <h4>LATEST POSTS:</h4>
+    <h4>LATEST POSTS:</h4>
+
     {% for post in collections.post | reverse %}
     {% if loop.index <= 5 %}
       <a class="text-gray-500 underline" href="{{ post.url }}">{{ post.data.title }}</a>
@@ -57,7 +58,8 @@
 
   <hr>
 
-  <a class="text-gray-500 underline" href="/books">books that I've read / books that I am reading</a>
+  <a class="text-gray-500 underline" href="/books">books that I've read</a><br>
+  <a class="text-gray-500 underline" href="/poems-I-am-a-fan-of">poems that I like :)</a>
 
   </body>
 </html>
