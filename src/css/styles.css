@@ -128,7 +128,7 @@ hr {
 .ascii-symbol6 {
   line-height: 1;
   margin: 2;
-  font-size: 0.7em;
+  font-size: 1em;
   pointer-events: none;
   text-align: center;
 }
