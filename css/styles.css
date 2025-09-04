@@ -22,10 +22,19 @@ nav {
   gap: 3rem;
 }
 
-.foot-this {
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+#foot-this {
   position: absolute;
+  margin-top: 2em;
   left: 50%;
-  top: 130%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
