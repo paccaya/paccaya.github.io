@@ -4,14 +4,16 @@
       <link rel="stylesheet" href="/css/styles.css">
   </head>
 
-  <body>
+  <body class="writing-body">
     <pre class="ascii-symbol5">
        __
       /\-\
      _||"|_
     ~^~^~^~^
     </pre>
+    <div class="home-nav-bar">
     {% include "partials/navbar.njk" %}
+    </div>
     <h1 style="font-weight: normal"> {{ title }} </h1>
     <p><span style="text-transform:uppercase">By {{ author }}</span></p>
       {% if page.date %}
