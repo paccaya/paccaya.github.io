@@ -13,6 +13,16 @@
   font-family: Doto;
 }
 
+.home-nav-bar {
+   text-align: center;
+   margin-top: 30px;
+}
+
+.writing-body {
+  margin: 2em auto;
+  max-width: 35em;
+}
+
 .home {
   display: flex;
   justify-content:center;
