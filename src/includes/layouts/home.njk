@@ -9,67 +9,14 @@
     <div id="content-wrap">
     <main>{{ content | safe}}</main>
 
-    <hr>
 
-    <h4>LATEST POSTS:</h4>
 
-    {% for post in collections.post | reverse %}
-    {% if loop.index <= 5 %}
-      <a class="text-gray-500 underline" href="{{ post.url }}">{{ post.data.title }}</a>
-      <div>
-      {% if post.data.description %}
-        <small>{{ post.data.description }}</small>
-      {% endif %}
-      </div>
-      <div>
-       {% if post.date %}
-        <i class="post-date">{{ post.date | readableDate }}</i>
-      {% else %}
-        <i>No date available</i>
-      {% endif %}
-      </div>
-    {% endif %}
-    {% else %}
-      <i>No posts found.</ii>
-    {% endfor %}
-  <p><i>See <a class="text-gray-500 underline" href="/writing">archive</a> to see all posts</i></p>
-
-  <hr>
-
-  <h4>POETRY:</h4>
-    {% for poetry in collections.poetry | reverse %}
-    {% if loop.index <= 5 %}
-      <a class="text-gray-500 underline" href="{{ poetry.url }}">{{ poetry.data.title }}</a>
-      <div>
-      {% if poetry.data.description %}
-        <small>{{ poetry.data.description }}</small>
-      {% endif %}
-      </div>
-      <div>
-       {% if poetry.date %}
-        <i class="post-date">{{ poetry.date | readableDate }}</i>
-      {% else %}
-        <i>No date available</i>
-      {% endif %}
-      </div>
-    {% endif %}
-    {% else %}
-      <i>No poems found.</i>
-    {% endfor %}
-  <p><i>See <a class="text-gray-500 underline" href="/poetry">archive</a> to see all poems</i></p>
-
-  <hr>
-
-  <a class="text-gray-500 underline" href="/books">books that I've read</a><br>
-  <a class="text-gray-500 underline" href="/poems-I-am-a-fan-of">poems that I like :)</a>
-  </div>
-
-  <div id="foot-this">
-    <p><:3)~~~~</p>
-    <a class="text-gray-500 underline" href="/about">contact</a>
-  </div>
 
   </div>
+
+
+  </div>
+
 
 
   </body>

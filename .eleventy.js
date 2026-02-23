@@ -1,18 +1,21 @@
 const { DateTime } = require("luxon");
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 module.exports = async function(eleventyConfig) {
   const clean = (await import("eleventy-plugin-clean")).default;
   await eleventyConfig.addPlugin(clean);
-};
 
-module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" })
       .setZone("America/New_York")
       .toFormat("dd LLL yyyy hh:mm a");
   });
 
-  eleventyConfig.addPassthroughCopy("./src/css");
+  eleventyConfig.addFilter("machineDate", (dateObj) => {
+    return jsToDateTime(dateObj).toISO();
+  });
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   eleventyConfig.addCollection("post", function (collectionApi) {
   const posts = collectionApi.getFilteredByGlob("./src/writing/*.html");
@@ -27,13 +30,15 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-    if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-      return false;
+		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
     }
   });
 
+  eleventyConfig.addPassthroughCopy("./src/css");
+  eleventyConfig.addPassthroughCopy("./src/fonts");
+
   return {
-    passthroughFileCopy: true,
     dir: {
       input: "src",
       output: "docs",

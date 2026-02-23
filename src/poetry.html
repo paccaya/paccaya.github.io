@@ -8,6 +8,9 @@ pagination:
   reverse: true
 permalink: "poetry/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html"
 ---
+<h1>poetry</h1>
+<p>here are a list of poems that I have written recently and <a class="text-gray-500 underline" href="/poems-I-am-a-fan-of/">here</a> is like a list of poems that I adore :)</p>
+
 <ul class="no-bullets">
   {% for poetry in collections.poetry %}
     <li>
@@ -25,7 +28,6 @@ permalink: "poetry/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumb
     </li>
   {% endfor %}
 </ul>
-
 
 <nav class="pagination">
   {% if pagination.previousPage %}

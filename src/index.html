@@ -2,17 +2,28 @@
 title: test
 layout: layouts/home.njk
 ---
-<pre class="ascii-symbol6">
-___
-<*,*>
-[`-']
--"-"-
-</pre>
-<h1 style="text-align: center;">ryan chan writes</h1>
-<p style="text-align: center;"><i>Let this darkness be a bell tower<br>
-and you the bell. As you ring,<br>
-what batters you becomes your strength.</i></p>
-<p style="text-align: right;">—RILKE, Sonnets to Orpheus II, 29</p>
-<p>HI.</p>
-<p>I write sometimes.</p>
-<p>Here is where I share writing :)</p>
+<div class="home">
+  <div class="left">
+    <h1>ryan chan's</h1>
+    <p>talking cobweb space</p>
+  </div>
+
+  <div class="right">
+
+    <img
+      class="home-image"
+      src="./images/home.avif"
+      alt="Landscape I took in Yellowstone"
+      eleventy:widths="300,600,1200"
+      eleventy:formats="webp,jpeg"
+      sizes="(max-width: 1200px) 50vw, 600px"
+      loading="eager">
+
+    <nav class="bottom-nav">
+      <a class="text-gray-500 underline" href="/writing/">writing</a>
+      <a class="text-gray-500 underline" href="/poetry/">poetry</a>
+      <a class="text-gray-500 underline" href="/about/">about</a>
+    </nav>
+
+  </div>
+</div>
