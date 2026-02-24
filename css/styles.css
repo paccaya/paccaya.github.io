@@ -61,11 +61,16 @@ body {
 }
 
 .bottom-nav {
-  display: flex;
-  justify-content: right;
-  gap: 6rem;
-  padding-bottom: 3rem;
-  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 6rem;
+  row-gap: 1rem;
+
+  justify-content: end;
+}
+
+.bottom-nav a:nth-child(4) {
+  grid-column: 1;
 }
 
 .text-gray-500 {
@@ -86,6 +91,39 @@ body {
   .bottom-nav {
     gap: 2rem;
   }
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.book-author,
+.book-date {
+  font-size: 0.9rem;
+}
+
+.book-cover {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+
+  /* Responsive scaling */
+  max-width: 100%;
 }
 
 main {
