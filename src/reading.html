@@ -1,0 +1,63 @@
+---
+title: Reading
+layout: layouts/reading.njk
+permalink: /reading/
+
+reviewTruncate: 5
+quoteTruncate: 5
+---
+<h1>currently reading</h1>
+
+<h1>book collection list</h1>
+<p>A collection of everything I have read in the past:</p>
+
+<ul class="book-list">
+{% for book in collections.books %}
+  <li class="book-item">
+
+    {% if book.data.cover %}
+      <img
+        src="/images/covers/{{ book.data.cover }}"
+        alt="{{ book.data.title }} cover"
+        class="book-cover"
+      >
+    {% endif %}
+
+    <div class="book-info">
+
+      {% if book.templateContent or book.data.quote %}
+        <a href="/reading/{{ book.data.finished }}/{{ book.data.slug }}/">
+          <strong>{{ book.data.title }}</strong>
+        </a>
+      {% else %}
+        <strong>{{ book.data.title }}</strong>
+      {% endif %}
+
+      — {{ book.data.author }}
+
+      {% if book.data.finished %}
+        <span class="book-date">
+          {% if book.data.finished contains "-" %}
+            {{ book.data.finished | date: "%d %b %Y" }}
+          {% else %}
+            {{ book.data.finished }}
+          {% endif %}
+        </span>
+      {% endif %}
+
+      {% if book.templateContent %}
+        <p class="book-review">
+          {{ book.templateContent | strip_html | truncate: reviewTruncate }}
+        </p>
+      {% endif %}
+
+      {% if book.data.quote %}
+        <blockquote class="book-quote">
+          {{ book.data.quote | truncate: quoteTruncate }}
+        </blockquote>
+      {% endif %}
+
+    </div>
+  </li>
+{% endfor %}
+</ul>

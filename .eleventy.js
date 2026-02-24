@@ -29,6 +29,28 @@ module.exports = async function(eleventyConfig) {
   return poems;
   });
 
+  eleventyConfig.addCollection("books", function (collectionApi) {
+  const books = collectionApi.getFilteredByGlob("src/books/**/*.html");
+
+  console.log("Collected books:", books.length);
+
+  return books.sort((a, b) => {
+    const dateA = a.data.finished ? new Date(a.data.finished) : 0;
+    const dateB = b.data.finished ? new Date(b.data.finished) : 0;
+
+    return dateB - dateA; // newest first
+  });
+  });
+
+  eleventyConfig.addFilter("truncate", function (str, words = 20) {
+    if (!str) return "";
+    return str.split(" ").slice(0, words).join(" ") + (str.split(" ").length > words ? "…" : "");
+  });
+
+  eleventyConfig.addFilter("strip_html", function (str) {
+    return str ? str.replace(/<[^>]*>/g, "") : "";
+  });
+
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
