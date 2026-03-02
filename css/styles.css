@@ -10,6 +10,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: Gerud;
+  src: url('/fonts/gerud.woff2') format("woff2");
+  font-display: swap;
+}
+
 #name {
 	font-size: 1em;
 	line-height: 1.5em;
@@ -149,6 +155,7 @@ main {
 }
 
 footer {
+  font-family: Gerud, 'Times New Roman', serif;
   position: fixed;
   bottom: 0;
   left: 0;
