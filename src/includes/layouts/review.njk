@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body class="writing-body">
+    <pre class="ascii-symbol5">
+       __
+      /\-\
+     _||"|_
+    ~^~^~^~^
+    </pre>
+    <div class="home-nav-bar">
+    {% include "partials/navbar.njk" %}
+    </div>
+    <h1>REVIEW ON:</h1>
+    <h1 style="font-weight: normal"> {{ title }}</h1>
+    <p class="text-gray-500"><span style="text-transform:uppercase">By {{ author }}</span></p>
+      {% if page.date %}
+        <i class="post-date">{{ page.date | readableDate }}</i>
+      {% else %}
+        <i>No date available</i>
+      {% endif %}
+    <main>{{ content | safe}}</main>
+
+    <footer>© <a class="text-gray-500 underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0</a> 2025</footer>
+  </body>
+</html>

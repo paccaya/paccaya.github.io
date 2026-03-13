@@ -8,42 +8,91 @@ quoteTruncate: 40
 ---
 <h1>currently reading</h1>
 
+<ul class="book-list">
+  {% for book in collections.books %}
+  {% if book.data.status == "reading" %}
+    <li class="book-item">
+
+    {% if book.data.cover %}
+    <img
+      src="/images/covers/{{ book.data.cover }}"
+      alt="{{ book.data.title }} cover"
+      class="book-cover"
+      >
+    {% endif %}
+
+
+    <div class="book-title">
+      <a class="text-gray-500 underline" href="/reading/{{ book.data.finished }}/{{ book.data.slug }}/" class="book-link">
+        {{ book.data.title }}
+      </a>
+      <span class="book-author">
+        {{ book.data.author }}
+      </span>
+    </div>
+
+    {% if book.templateContent %}
+    <p class="book-review">
+      {{ book.templateContent | strip_html | truncate: reviewTruncate }}
+    </p>
+    {% endif %}
+
+    {% if book.data.quote %}
+    <blockquote class="book-quote">
+      "{{ book.data.quote | truncate: quoteTruncate }}"
+    </blockquote>
+    {% endif %}
+
+    </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
 <h1>book collection list</h1>
 <p>A collection of everything I have read in the past:</p>
 
 <ul class="book-list">
-{% for book in collections.books %}
-<li class="book-item">
+  {% for book in collections.books %}
+  {% if book.data.status == "finished" %}
+  <li class="book-item">
 
-  {% if book.data.cover %}
-  <img
-    src="/images/covers/{{ book.data.cover }}"
-    alt="{{ book.data.title }} cover"
-    class="book-cover"
-    >
+    {% if book.data.cover %}
+    <img
+      src="/images/covers/{{ book.data.cover }}"
+      alt="{{ book.data.title }} cover"
+      class="book-cover"
+      >
+    {% endif %}
+
+    <div class="book-title">
+      <a class="text-gray-500 underline" href="/reading/{{ book.data.finished }}/{{ book.data.slug }}/" class="book-link">
+        {{ book.data.title }}
+      </a>
+      <span class="book-author">
+        {{ book.data.author }}
+      </span>
+
+      {% if book.data.finished %}
+      <span class="book-finished">
+        <i class="text-gray-500 underline">{{ book.data.finished | date: "%B %d, %Y" }}</i>
+      </span>
+      {% endif %}
+
+    </div>
+
+    {% if book.templateContent %}
+    <p class="book-review">
+      {{ book.templateContent | strip_html | truncate: reviewTruncate }}
+    </p>
+    {% endif %}
+
+    {% if book.data.quote %}
+    <blockquote class="book-quote">
+      "{{ book.data.quote | truncate: quoteTruncate }}"
+    </blockquote>
+    {% endif %}
+
+  </li>
   {% endif %}
-
-  <div class="book-title">
-    <a href="/reading/{{ book.data.finished }}/{{ book.data.slug }}/" class="book-link">
-      {{ book.data.title }}
-    </a>
-    <span class="book-author">
-      {{ book.data.author }}
-    </span>
-  </div>
-
-  {% if book.templateContent %}
-  <p class="book-review">
-    {{ book.templateContent | strip_html | truncate: reviewTruncate }}
-  </p>
-  {% endif %}
-
-  {% if book.data.quote %}
-  <blockquote class="book-quote">
-    "{{ book.data.quote | truncate: quoteTruncate }}"
-  </blockquote>
-  {% endif %}
-
-</li>
-{% endfor %}
+  {% endfor %}
 </ul>
