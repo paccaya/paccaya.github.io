@@ -192,7 +192,7 @@ hr {
 
 .absolute-center {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -201,7 +201,7 @@ hr {
 
 .about-information {
   position: absolute;
-  top: 57%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -211,6 +211,46 @@ hr {
 .post-date {
   display: inline-block;
   margin-bottom: 12px;
+}
+
+.ascii-symbol {
+  line-height: 1;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  pointer-events: none;
+}
+
+.ascii-symbol2 {
+  line-height: 1;
+  top: 28.5%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  pointer-events: none;
+}
+
+.ascii-symbol3 {
+  line-height: 1;
+  top: 29%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  pointer-events: none;
+}
+
+.ascii-symbol4 {
+  line-height: 1;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  pointer-events: none;
 }
 
 .ascii-symbol5 {
