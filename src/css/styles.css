@@ -66,6 +66,12 @@ body {
   height: auto;
 }
 
+.challenge-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
