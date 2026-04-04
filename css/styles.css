@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: Gerud;
-  src: url('/fonts/gerud.woff2') format("woff2");
+  src: url('/fo-nts/gerud.woff2') format("woff2");
   font-display: swap;
 }
 
@@ -69,6 +69,12 @@ body {
 .challenge-image {
   width: 100%;
   max-width: 500px;
+  height: auto;
+}
+
+.dumbphone-image {
+  width: 100%;
+  max-width: 300px;
   height: auto;
 }
 
