@@ -12,7 +12,9 @@
 
 @font-face {
   font-family: Gerud;
-  src: url('/fo-nts/gerud.woff2') format("woff2");
+  src:
+    url('/fonts/gerud.woff2') format("woff2"),
+    url('/font/gerud.otf') format("opentype");
   font-display: swap;
 }
 
@@ -32,6 +34,12 @@ body {
 .home-nav-bar {
    text-align: center;
    margin-top: 30px;
+}
+
+.content-wrapper {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 0%;
 }
 
 .writing-body {
@@ -75,6 +83,18 @@ body {
 .dumbphone-image {
   width: 100%;
   max-width: 300px;
+  height: auto;
+}
+
+.elephant-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.barely-legal-note {
+  width: 100%;
+  max-width: 400px;
   height: auto;
 }
 
