@@ -36,12 +36,6 @@ body {
    margin-top: 30px;
 }
 
-.content-wrapper {
-  position: absolute;
-  margin-left: 50%;
-  margin-top: 0%;
-}
-
 .writing-body {
   margin: 2em auto;
   max-width: 35em;
