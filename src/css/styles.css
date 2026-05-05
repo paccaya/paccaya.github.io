@@ -62,6 +62,10 @@ body {
   align-items: center;
 }
 
+.web-ring {
+  font-size: 12px;
+}
+
 .home-image {
   width: 100%;
   max-width: 450px;
