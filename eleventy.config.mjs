@@ -1,7 +1,9 @@
-const { DateTime } = require("luxon");
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+import { DateTime } from "luxon";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import clean from "eleventy-plugin-clean";
 
-module.exports = async function(eleventyConfig) {
+export default async function(eleventyConfig) {
   const clean = (await import("eleventy-plugin-clean")).default;
   await eleventyConfig.addPlugin(clean);
 
@@ -15,13 +17,18 @@ module.exports = async function(eleventyConfig) {
     return jsToDateTime(dateObj).toISO();
   });
 
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   eleventyConfig.addCollection("post", function (collectionApi) {
-  const posts = collectionApi.getFilteredByGlob("./src/writing/*.html");
+  const posts = collectionApi
+    .getFilteredByGlob("./src/writing/*.html")
+    .filter(post => !post.data.draft);
+
   console.log("Collected posts:", posts.length);
+
   return posts;
-  });
+});
 
   eleventyConfig.addCollection("poetry", function (collectionApi) {
   const poems = collectionApi.getFilteredByGlob("./src/poetry/*.html");
@@ -29,6 +36,15 @@ module.exports = async function(eleventyConfig) {
 
   return poems;
   });
+
+  eleventyConfig.addCollection("allWriting", function(collectionApi) {
+  const posts = collectionApi.getFilteredByGlob("./src/writing/*.html");
+  const poems = collectionApi.getFilteredByGlob("./src/poetry/*.html");
+
+  return [...posts, ...poems]
+    .filter(item => !item.data.draft)
+    .sort((a, b) => b.date - a.date);
+});
 
   eleventyConfig.addCollection("books", function (collectionApi) {
   const books = collectionApi.getFilteredByGlob("src/books/**/*.html");
@@ -53,8 +69,8 @@ module.exports = async function(eleventyConfig) {
   });
 
   eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-			return false;
+    if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
     }
   });
 
@@ -62,6 +78,7 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/CNAME");
+  eleventyConfig.addPassthroughCopy("./src/feed.xsl");
 
   return {
     dir: {
