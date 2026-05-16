@@ -28,9 +28,7 @@
 
 {%- for item in collections.allWriting %}
 
-{%- set absoluteUrl %}
-  {{ item.url | htmlBaseUrl(metadata.base) }}
-{%- endset %}
+{%- set absoluteUrl = item.url | htmlBaseUrl(metadata.base) -%}
 
 <entry>
   <title>{{ item.data.title | escape }}</title>
@@ -38,9 +36,8 @@
   <updated>{{ item.date | dateToRfc3339 }}</updated>
   <id>{{ absoluteUrl }}</id>
 
-  {% if item.data.description %}
-    <summary>{{ item.data.description | escape }}</summary>
-  {% endif %}
+  {%- if item.data.description %}
+<summary>{{ (item.data.description or (item.templateContent | striptags | truncate(280))) | escape }}</summary>  {%- endif %}
 </entry>
 
 {%- endfor %}
