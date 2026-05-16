@@ -26,19 +26,15 @@
     <name>{{ metadata.author.name }}</name>
   </author>
 
-{%- for item in collections.allWriting %}
-
+{%- for item in collections.allWriting -%}
 {%- set absoluteUrl = item.url | htmlBaseUrl(metadata.base) -%}
-
+{%- set summary = item.data.description or (item.templateContent | striptags | truncate(180)) -%}
 <entry>
-  <title>{{ item.data.title | escape }}</title>
-  <link href="{{ absoluteUrl }}" />
-  <updated>{{ item.date | dateToRfc3339 }}</updated>
-  <id>{{ absoluteUrl }}</id>
-
-  {%- if item.data.description %}
-<summary>{{ (item.data.description or (item.templateContent | striptags | truncate(280))) | escape }}</summary>  {%- endif %}
+<title>{{ item.data.title | escape }}</title>
+<link href="{{ absoluteUrl }}" />
+<updated>{{ item.date | dateToRfc3339 }}</updated>
+<id>{{ absoluteUrl }}</id>
+<summary>{{ summary | escape }}</summary>
 </entry>
-
-{%- endfor %}
+{%- endfor -%}
 </feed>
