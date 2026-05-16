@@ -1,5 +1,10 @@
 const { DateTime } = require("luxon");
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
+module.exports = function (eleventyConfig) {
+	eleventyConfig.addPlugin(pluginRss);
+};
 
 module.exports = async function(eleventyConfig) {
   const clean = (await import("eleventy-plugin-clean")).default;
@@ -26,6 +31,7 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.addCollection("poetry", function (collectionApi) {
   const poems = collectionApi.getFilteredByGlob("./src/poetry/*.html");
   console.log("Collected poems:", poems.length);
+
   return poems;
   });
 
