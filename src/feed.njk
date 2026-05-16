@@ -28,7 +28,7 @@
 
 {%- for item in collections.allWriting -%}
 {%- set absoluteUrl = item.url | htmlBaseUrl(metadata.base) -%}
-{%- set summary = item.data.description or (item.templateContent | striptags | truncate(180)) -%}
+{%- set summary = item.data.description or (item.templateContent | striptags | truncate(20)) -%}
 <entry>
 <title>{{ item.data.title | escape }}</title>
 <link href="{{ absoluteUrl }}" />
