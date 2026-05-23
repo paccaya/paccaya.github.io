@@ -105,6 +105,12 @@ body {
   height: auto;
 }
 
+.sky-halftone {
+  width: 100%;
+  max-width: 525px;
+  height: auto;
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
