@@ -6,6 +6,7 @@ pagination:
   size: 10
   alias: posts
   reverse: true
+permalink: "writing/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}index.html"
 ---
 <h1>writing</h1>
 <p>a list of what I have written recently:</p>
@@ -27,6 +28,21 @@ pagination:
   {% endfor %}
 </ul>
 
+<nav class="pagination">
 
-{% if pagination.previousPage %}<a href="{{ pagination.previousPage }}">Previous</a>{% endif %}
-{% if pagination.nextPage %}<a href="{{ pagination.nextPage }}">Next</a>{% endif %}
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">Previous</a>
+  {% endif %}
+
+  {% for href in pagination.hrefs %}
+    <a href="{{ href }}"
+       class="{% if forloop.index0 == pagination.pageNumber %}active{% endif %}">
+      {{ forloop.index }}
+    </a>
+  {% endfor %}
+
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Next</a>
+  {% endif %}
+
+</nav>
