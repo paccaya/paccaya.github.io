@@ -111,6 +111,20 @@ body {
   height: auto;
 }
 
+.split-tree {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.grief-ritual {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
