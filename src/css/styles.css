@@ -125,6 +125,14 @@ body {
   display: block;
 }
 
+.misty-tree {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
