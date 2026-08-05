@@ -133,6 +133,40 @@ body {
   display: block;
 }
 
+.squirrel-img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.bineweed {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.fire-img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.window-reflection {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
