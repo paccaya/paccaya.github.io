@@ -79,6 +79,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/CNAME");
   eleventyConfig.addPassthroughCopy("./src/feed.xsl");
+  eleventyConfig.addPassthroughCopy("./src/videos");
 
   return {
     dir: {
