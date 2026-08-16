@@ -46,6 +46,11 @@ body {
   max-width: 35em;
 }
 
+.about-wrapper {
+  margin: 2em auto;
+  max-width: 35em;
+}
+
 .home {
   display: flex;
   justify-content:center;
