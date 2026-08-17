@@ -421,17 +421,17 @@ td, th {
   padding: 7px;
 }
 
-.table-wrap {
+.enneagram-table {
   width: 70vw;
   position: relative;
   left: 40%;
   margin-left: calc(-50vw + 50%);
-}
 
-th {
-  border-bottom: 1px solid #ddd;
-}
+  th {
+    border-bottom: 1px solid #ddd;
+  }
 
-tr:nth-child(2n+2) {
-  background-color: #D6EEEE;
+  tr:nth-child(2n+2)  {
+    background-color: #D6EEEE;
+  }
 }
