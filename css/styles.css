@@ -389,6 +389,68 @@ hr {
   pointer-events: none;
 }
 
+.ascii-symbol-base-fire {
+  line-height: 1;
+  top: 2.7%;
+  left: 0.1%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  font-size: 0.5em;
+  pointer-events: none;
+  color: rgba(235, 90, 57, 1);
+}
+
+.ascii-symbol-fire {
+  line-height: 1;
+  top: 2.7%;
+  left: 48.2%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  font-size: 0.5em;
+  pointer-events: none;
+  color: rgba(235, 90, 57, 1);
+}
+
+.ascii-cobweb {
+  line-height: 1;
+  top: 19.2%;
+  left: 10%;
+  position: absolute;
+  margin: 0;
+  font-size: 0.3em;
+  pointer-events: none;
+  color: rgba(185, 180, 180, 1);
+}
+
+.ascii-presence {
+  line-height: 1;
+  top: 35%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  font-size: 0.7em;
+  pointer-events: none;
+  color: rgba(185, 180, 180, 1);
+  opacity: 0.3;
+}
+
+.ascii-absence {
+  line-height: 1;
+  top: 35.5%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  font-size: 0.7em;
+  pointer-events: none;
+  color: rgba(185, 140, 180, 1);
+}
+
+
+
 .ascii-symbol6 {
   line-height: 1;
   margin: 2;
