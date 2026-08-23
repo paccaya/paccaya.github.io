@@ -11,9 +11,23 @@
      _||"|_
     ~^~^~^~^
     </pre>
+          <pre class="ascii-symbol-fire">
+             .
+              )
+             ((
+             ) \
+            ( , )
+
+    </pre>
     <div class="home-nav-bar">
     {% include "partials/navbar.njk" %}
     </div>
+
+    <div class="content-wrapper">
+<button id="theme-toggle">Toggle Dark Mode</button>
+           <script src="/files/theme-toggle.js"></script>
+  </div>
+
     <h1 style="font-weight: normal"> {{ title }} </h1>
     <p><span style="text-transform:uppercase">By {{ author }}</span></p>
       {% if page.date %}
@@ -21,6 +35,7 @@
       {% else %}
         <i>No date available</i>
       {% endif %}
+
     <main>{{ content | safe}}</main>
 
     <footer>© <a class="text-gray-500 underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CC BY-NC-SA 4.0</a> 2025</footer>
