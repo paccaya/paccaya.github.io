@@ -180,6 +180,14 @@ body {
   margin-bottom: 20px;
 }
 
+.absence {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
