@@ -421,17 +421,6 @@ hr {
   color: rgba(235, 90, 57, 1);
 }
 
-.ascii-cobweb {
-  line-height: 1;
-  top:21.2%;
-  left: 8%;
-  position: absolute;
-  margin: 0;
-  font-size: 0.3em;
-  pointer-events: none;
-  color: rgba(185, 180, 180, 1);
-}
-
 .ascii-presence {
   line-height: 1;
   top: 35%;
