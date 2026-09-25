@@ -80,7 +80,6 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/CNAME");
   eleventyConfig.addPassthroughCopy("./src/feed.xsl");
   eleventyConfig.addPassthroughCopy("./src/videos");
-  eleventyConfig.addPassthroughCopy("./src/tv");
 
   return {
     dir: {
