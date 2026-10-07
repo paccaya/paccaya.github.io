@@ -82,8 +82,8 @@ body {
 
 .home-image {
   width: 100%;
-  max-width: 450px;
-  height: 650px;
+  max-width: 600px;
+  height: 350px;
 }
 
 .challenge-image {
@@ -188,6 +188,14 @@ body {
   margin-bottom: 20px;
 }
 
+.web-image {
+  width: 70%;
+  max-width: 600px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
 .bottom-nav {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -289,6 +297,10 @@ footer {
 .quotation {
   margin-left: 2em;
   text-transform:uppercase;
+}
+
+.full-indent {
+  margin-left: 2em;
 }
 
 .no-bullets {
