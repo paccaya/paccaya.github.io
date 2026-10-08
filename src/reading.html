@@ -1,98 +1,15 @@
 ---
-title: Reading
+title: Book spread
 layout: layouts/reading.njk
 permalink: /reading/
-
-reviewTruncate: 30
-quoteTruncate: 40
 ---
-<h1>currently reading</h1>
-
-<ul class="book-list">
-  {% for book in collections.books %}
-  {% if book.data.status == "reading" %}
-    <li class="book-item">
-
-    {% if book.data.cover %}
-    <img
-      src="/images/covers/{{ book.data.cover }}"
-      alt="{{ book.data.title }} cover"
-      class="book-cover"
-      >
-    {% endif %}
-
-
-    <div class="book-title">
-      <a class="text-gray-500 underline" href="/reading/{{ book.data.finished }}/{{ book.data.slug }}/" class="book-link">
-        {{ book.data.title }}
-      </a>
-      <span class="book-author">
-        {{ book.data.author }}
-      </span>
-    </div>
-
-    {% if book.templateContent %}
-    <p class="book-review">
-      {{ book.templateContent | strip_html | truncate: reviewTruncate }}
-    </p>
-    {% endif %}
-
-    {% if book.data.quote %}
-    <blockquote class="book-quote">
-      "{{ book.data.quote | truncate: quoteTruncate }}"
-    </blockquote>
-    {% endif %}
-
-    </li>
-  {% endif %}
-  {% endfor %}
-</ul>
-
-<h1>book reading library</h1>
-<p>hmmm maybe later</p>
-
-<ul class="book-list">
-  {% for book in collections.books %}
-  {% if book.data.status == "finished" %}
-  <li class="book-item">
-
-    {% if book.data.cover %}
-    <img
-      src="/images/covers/{{ book.data.cover }}"
-      alt="{{ book.data.title }} cover"
-      class="book-cover"
-      >
-    {% endif %}
-
-    <div class="book-title">
-      <a class="text-gray-500 underline" href="/reading/{{ book.data.finished }}/{{ book.data.slug }}/" class="book-link">
-        {{ book.data.title }}
-      </a>
-      <span class="book-author">
-        {{ book.data.author }}
-      </span>
-
-      {% if book.data.finished %}
-      <span class="book-finished">
-        <i class="text-gray-500 underline">{{ book.data.finished | date: "%B %d, %Y" }}</i>
-      </span>
-      {% endif %}
-
-    </div>
-
-    {% if book.templateContent %}
-    <p class="book-review">
-      {{ book.templateContent | strip_html | truncate: reviewTruncate }}
-    </p>
-    {% endif %}
-
-    {% if book.data.quote %}
-    <blockquote class="book-quote">
-      "{{ book.data.quote | truncate: quoteTruncate }}"
-    </blockquote>
-    {% endif %}
-
-  </li>
-  {% endif %}
-  {% endfor %}
-</ul>
+<p>Spread of what I am reading:</p>
+<img
+      class="elephant-image"
+      src="/images/book-spread-081026.avif"
+      alt="The Spell of the Sensuous: Perceptions and Language in the More-than-human World by David Abram, The Bluest Eye by Toni Morrison, The Wild Edge of Sorrow by Francis Weller, Becoming Animal: An Earthly Cosmology by David Abram, Spinning Threads of Radical Aliveness: Transcending the Legacy of Separation in Our Individual Lives, Noticing: Intimate Encounters with the Natural World: Richard Louv"
+      eleventy:widths="300,600,1200"
+      eleventy:formats="webp,jpeg"
+      sizes="(max-width: 1200px) 50vw, 600px"
+      loading="eager">
+<p><i class="text-gray-500">Out of the many spreads I have had the opportunity to be accompanied by, this may be one of my most cherished.</i></p>
