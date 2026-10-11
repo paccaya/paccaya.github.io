@@ -351,6 +351,17 @@ hr {
   margin-bottom: 12px;
 }
 
+.ascii-symbol5 {
+  line-height: 1;
+  top: 3.3%;
+  left: 49.3%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  font-size: 0.6em;
+  pointer-events: none;
+}
+
 .ascii-symbol-base {
   line-height: 1;
   top: 3.3%;
