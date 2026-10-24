@@ -2,43 +2,48 @@
 title: lichenrocks
 layout: layouts/home.njk
 ---
-<div class="home">
-  <div class="left">
-    <h1>ryan chan's</h1>
-    <p>murmurring maitake log</p>
-    <br>
+<div class="home-container">
 
-    <div class="blurb">
-<p>Humans are tuned for relationship. The eyes, the skin, the tongue, ears, and nostrils—all are gates where our body receives the nourishment of otherness. <br>...<br> The color of sky, the rush of waves—every aspect of the earthy sensuous could draw us into a relationship fed with curiosity and spiced with danger. Every sound was a voice, every scrape or blunder was a meeting—with Thunder, with Oak, with Dragonfly. And from all of these relationships our collective sensibilities were nourished.</p>
-<p>Today we participate almost exclusively with other humans and with our own human-made technologies. It is a precarious situation, given our age-old reciprocity with the many-voiced landscape. We still <i>need</i> that which is other than ourselves and our own creations. The simple premise is ... we are human only in contact, and conviviality, with what is not human.<br>
-—David Abram
-</p>
-        </div>
+  <div class="centered"><p class="blur-text">lichen rocks</p>
+    <svg>
+      <filter id="filter">
+        <feComponentTransfer>
+          <feFuncA type="discrete" tableValues="0 0 2 1" />
+        </feComponentTransfer>
+      </filter>
+      </svg>
   </div>
 
-  <div class="right">
 
-    <img
-      class="home-image"
-      src="./images/home.avif"
-      alt="My friend, Sameer, walking down a street of New York with a callery pear and ginkgo tree planted on the sidewalk"
-      eleventy:widths="300,600,1200"
-      eleventy:formats="webp,jpeg"
-      sizes="(max-width: 1200px) 50vw, 500px"
-      loading="eager">
+  <div class="left-down">
+    <p class="blur-text-descriptor">resting as
+    <a class="home" href="https://fornoone.org/just-breathe/">breathing</a> ...<br>
+   <p class="blur-text-descriptor">  ... <a class="home" href="https://fornoone.org/just-breathe/">breathing</a> as resting</p>
+  </div>
 
+
+  <div class="home-left">
     <nav class="bottom-nav">
-      <a class="text-gray-500 underline" href="/writing/">writing</a>
-      <a class="text-gray-500 underline" href="/poetry/">poetry</a>
-      <a class="text-gray-500 underline" href="/about/">about</a>
-      <a class="text-gray-500 underline" href="/reading/">reading</a>
-      <a class="text-gray-500 underline" href="/zibaldone/">zibaldone</a>
-      <a class="text-gray-500 underline" href="/webring/">webrings</a>
-      <a class="text-gray-500 underline" href="/contact/">contact</a>
-      <a class="text-gray-500 underline" href="/feed.xml">rss</a>
+      <b><a class="home" href="/writing/">writing</a>
+      <a class="home" href="/poetry/">poetry</a>
+      <a class="home" href="/about/">about</a>
+      <a class="home" href="/reading/">reading</a>
+      <a class="home" href="/zibaldone/">zibaldone</a>
+      <a class="home" href="/webring/">webrings</a>
+      <a class="home" href="/contact/">contact</a>
+      <a class="home" href="/feed.xml">rss</a></b>
     </nav>
-
   </div>
+
+
+<div class="home-quote"><p class="blur-text-descriptor">
+<p>Humans are tuned for relationship. The eyes, the skin, the tongue, ears, and nostrils—all are gates where our body receives the nourishment of otherness. <br>...<br> The color of sky, the rush of waves—every aspect of the earthy sensuous could draw us into a relationship fed with curiosity and spiced with danger. Every sound was a voice, every scrape or blunder was a meeting—with Thunder, with Oak, with Dragonfly. And from all of these relationships our collective sensibilities were nourished.</p>
+<p>Today we participate almost exclusively with other humans and with our own human-made technologies. It is a precarious situation, given our age-old reciprocity with the many-voiced landscape. We still <i>need</i> that which is other than ourselves and our own creations. The simple premise is ... we are human only in contact, and conviviality, with <i>what is not human</i><br>
+—David Abram</p>
+  </div>
+
+
+</div>
 
   <footer>
 
@@ -55,3 +60,35 @@ lichenrocks © <a class="text-gray-500 underline" href="https://creativecommons.
   </footer>
 
 </div>
+
+
+<script>
+
+
+const table = {
+        0: '0',
+        10: '0 1 1 1 1 1 1 1 1 1',
+        20: '0 0 1 1 1 1 1 1 1 1',
+        30: '0 0 0 1 1 1 1 1 1 1',
+        40: '0 0 0 0 1 1 1 1 1 1',
+        50: '0 1',
+        60: '0 0 0 0 0 0 1 1 1 1',
+        70: '0 0 0 0 0 0 0 1 1 1',
+        80: '0 0 0 0 0 0 0 0 1 1',
+        90: '0 0 0 0 0 0 0 0 0 1',
+        100: '1',
+      };
+      function handleDOMContentLoaded() {
+        const transferFuncs = Array.from(
+          document.getElementsByClassName('transfer-func')
+        );
+
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
+      } else {
+        handleDOMContentLoaded();
+      }
+      }
+
+  </script>
