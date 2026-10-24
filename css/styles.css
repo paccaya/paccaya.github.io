@@ -19,8 +19,8 @@
 }
 
 #name {
-	font-size: 1em;
-	line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
   margin-left: 12.5%;
   margin-top: 25em;
   padding-bottom: 50px;
@@ -31,9 +31,59 @@ body {
   font-family: Marauder Text;
 }
 
+.home-container {
+  position: relative;
+  width: 100%;
+}
+
 .home-nav-bar {
    text-align: center;
    margin-top: 30px;
+}
+
+a.home {
+  color: #FC5131;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.blur-text {
+  font-family: Romic Std;
+  color: #F5A447;
+  font-size: 3em;
+  filter: blur(1px) url(#filter)
+}
+
+.blur-text-descriptor {
+  font-family: Romic Std;
+  color: #F5A447;
+  font-size: 23px;
+  filter: blur(0.95px) url(#filter)
+}
+
+.home-quote {
+  position: absolute;
+  top: 55%;
+  right: 0px;
+  color: #fff;
+  font-size: 0.9em;
+  padding-right: 5%;
+  padding-left: 70%;
+  font-family: Times New Roman;
+  filter: blur(0.5px) url(#filter)
+}
+
+.left-down {
+  position: absolute;
+  top: 45%;
+  left: 43%;
+  z-index: 2;
 }
 
 .base-nav-bar {
@@ -51,13 +101,12 @@ body {
   max-width: 35em;
 }
 
-.home {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  min-height: 80vh;
-  gap: 8rem;
-  padding: 2rem;
+body.home {
+  background-image: url("/images/lichen.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 91vh;
 }
 
 .left {
@@ -81,9 +130,9 @@ body {
 }
 
 .home-image {
+  display: block;
   width: 100%;
-  max-width: 700px;
-  height: 650px;
+  height: auto;
 }
 
 .signature {
@@ -201,36 +250,36 @@ body {
 }
 
 .bottom-nav {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 6rem;
-  row-gap: 1rem;
-
+  position: relative;
+  width: 600px;
+  height: 600px;
+  font-size: 20px;
+  font-family: "Times New Roman", serif;
   justify-content: end;
 }
 
-.bottom-nav a:nth-child(4) {
-  grid-column: 1;
+.bottom-nav a {
+  position: absolute;
+  top: 43%;
+  left: 21%;
+  white-space: nowrap;
+  transform:
+    rotate(var(--angle))
+    translateY(var(--radius))
+    rotate(calc(-1 * var(--angle)));
 }
+
+.bottom-nav a:nth-child(1) { --angle: 0deg;   --radius: 30px; }
+.bottom-nav a:nth-child(2) { --angle: 45deg;  --radius: 60px; }
+.bottom-nav a:nth-child(3) { --angle: 90deg;  --radius: 90px; }
+.bottom-nav a:nth-child(4) { --angle: 135deg; --radius: 120px; }
+.bottom-nav a:nth-child(5) { --angle: 180deg; --radius: 150px; }
+.bottom-nav a:nth-child(6) { --angle: 225deg; --radius: 180px; }
+.bottom-nav a:nth-child(7) { --angle: 270deg; --radius: 210px; }
+.bottom-nav a:nth-child(8) { --angle: 315deg; --radius: 240px; }
 
 .text-gray-500 {
   color: rgba(107, 114, 128, 1);
-}
-
-@media (max-width: 900px) {
-  .home {
-    flex-direction: column;
-    text-align: center;
-    gap: 3rem;
-  }
-
-  .left {
-    text-align: center;
-  }
-
-  .bottom-nav {
-    gap: 2rem;
-  }
 }
 
 .book-item {
@@ -272,10 +321,6 @@ body {
   max-width: 100%;
 }
 
-div.center {
-  text-align: center;
-}
-
 main {
   margin-top: 2em;
 }
@@ -299,7 +344,8 @@ footer {
   left: 0;
   text-align: center;
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #28032F;
+  color: #FFFCE6;
 }
 
 .quotation {
