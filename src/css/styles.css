@@ -18,6 +18,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: Romic Std;
+  src:
+    url('/fonts/RomicStd-Medium.woff2') format("woff2"),
+    url('/fonts/RomicStd-Medium.otf') format("opentype");
+  font-display: swap;
+}
+
 #name {
   font-size: 1em;
   line-height: 1.5em;

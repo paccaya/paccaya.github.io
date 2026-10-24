@@ -82,8 +82,6 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/feed.xsl");
   eleventyConfig.addPassthroughCopy("./src/videos");
   eleventyConfig.addPassthroughCopy("./src/audio");
-  eleventyConfig.addPassthroughCopy("./src/tv");
-
   return {
     dir: {
       input: "src",
