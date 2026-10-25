@@ -21,7 +21,7 @@
 @font-face {
   font-family: Romic Std;
   src:
-    url('/fonts/RomicStd-Medium.woff2') format("woff2"),
+    url('/fonts/RomicStd-Medium.woff') format("woff"),
     url('/fonts/RomicStd-Medium.otf') format("opentype");
   font-display: swap;
 }
@@ -79,6 +79,7 @@ a.home {
 
 .home-quote {
   position: absolute;
+  z-index: -1;
   top: 55%;
   right: 0px;
   color: #fff;
