@@ -67,7 +67,7 @@ a.home {
   font-family: Romic Std;
   color: #F5A447;
   font-size: 3em;
-  filter: blur(1px) url(#filter)
+  filter: blur(2px) url(#filter)
 }
 
 .blur-text-descriptor {
