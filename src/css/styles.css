@@ -55,6 +55,10 @@ a.home {
   color: #FC5131;
 }
 
+.centered-text {
+  text-align: center;
+}
+
 .centered {
   position: absolute;
   top: 30%;
