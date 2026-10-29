@@ -318,6 +318,8 @@ body.home {
 .bottom-nav a:nth-child(6) { --angle: 225deg; --radius: 180px; }
 .bottom-nav a:nth-child(7) { --angle: 270deg; --radius: 210px; }
 .bottom-nav a:nth-child(8) { --angle: 315deg; --radius: 240px; }
+.bottom-nav a:nth-child(9) { --angle: 360deg; --radius: 270px; }
+.bottom-nav a:nth-child(10) { --angle: 360deg; --radius: 400px; }
 
 .text-gray-500 {
   color: rgba(107, 114, 128, 1);
