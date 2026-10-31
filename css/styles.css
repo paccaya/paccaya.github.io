@@ -52,7 +52,7 @@ body {
 }
 
 a.home {
-  color: #FFFFFF;
+  color: #370C00;
 }
 
 .centered-text {
@@ -61,22 +61,22 @@ a.home {
 
 .centered {
   position: absolute;
-  top: 30%;
-  left: 50%;
+  top: 53.5%;
+  left: 52.5%;
   transform: translateX(-50%);
   z-index: 1;
 }
 
 .blur-text {
-  font-family: Romic Std;
-  color: #8BCFE7;
+  font-family: Arial;
+  color: #000000;
   font-size: 3em;
   filter: blur(2px) url(#filter)
 }
 
 .blur-text-descriptor {
   font-family: Romic Std;
-  color: #8BCFE7;
+  color: #FFFFFF;
   font-size: 23px;
   filter: blur(0.95px) url(#filter)
 }
@@ -94,8 +94,8 @@ a.home {
 
 .left-down {
   position: absolute;
-  top: 45%;
-  left: 43%;
+  top: 70%;
+  left: 50%;
   z-index: 2;
 }
 
