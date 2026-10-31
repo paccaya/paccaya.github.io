@@ -61,7 +61,7 @@ a.home {
 
 .centered {
   position: absolute;
-  top: 53.5%;
+  top: 54.5%;
   left: 52.5%;
   transform: translateX(-50%);
   z-index: 1;
