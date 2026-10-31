@@ -52,7 +52,7 @@ body {
 }
 
 a.home {
-  color: #FC5131;
+  color: #FFFFFF;
 }
 
 .centered-text {
@@ -69,29 +69,16 @@ a.home {
 
 .blur-text {
   font-family: Romic Std;
-  color: #F5A447;
+  color: #8BCFE7;
   font-size: 3em;
   filter: blur(2px) url(#filter)
 }
 
 .blur-text-descriptor {
   font-family: Romic Std;
-  color: #F5A447;
+  color: #8BCFE7;
   font-size: 23px;
   filter: blur(0.95px) url(#filter)
-}
-
-.home-quote {
-  position: absolute;
-  z-index: -1;
-  top: 55%;
-  right: 0px;
-  color: #fff;
-  font-size: 0.9em;
-  padding-right: 5%;
-  padding-left: 70%;
-  font-family: Times New Roman;
-  filter: blur(0.5px) url(#filter)
 }
 
 .second-home-quote {
@@ -128,7 +115,7 @@ a.home {
 }
 
 body.home {
-  background-image: url("/images/lichen.avif");
+  background-image: url("/images/box.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
