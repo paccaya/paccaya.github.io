@@ -3,26 +3,17 @@ title: lichenrocks
 layout: layouts/home.njk
 ---
 <div class="home-container">
+  <div class="title"><p>lichen rocks</p>
+  </div>
 
-  <div class="centered"><p class="blur-text">lichen rocks</p>
-    <svg>
+    <nav class="bottom-nav">
+        <svg>
       <filter id="filter">
         <feComponentTransfer>
           <feFuncA type="discrete" tableValues="0 0 2 1" />
         </feComponentTransfer>
       </filter>
       </svg>
-  </div>
-
-
-  <div class="left-down">
-    <p class="blur-text-descriptor">touching the
-    <a class="home" href="https://www.bayoakomolafe.net/post/thinking-outside-the-box">box</a> ...</p>
-  </div>
-
-
-  <div class="home-left">
-    <nav class="bottom-nav">
       <b><a class="home" href="/writing/">writing</a>
       <a class="home" href="/poetry/">poetry</a>
       <a class="home" href="/about/">about</a>
@@ -34,7 +25,15 @@ layout: layouts/home.njk
       <a class="home" href="/experiments/">experiments</a>
       <a class="home" href="/earthward/">0</a></b>
     </nav>
-  </div>
+
+<img
+      class="sky"
+      src="/images/sky.avif"
+      alt="Tree and sky"
+      eleventy:widths="300,600,1200"
+      eleventy:formats="webp,jpeg"
+      sizes="(max-width: 1200px) 50vw, 600px"
+      loading="eager">
 
 </div>
 
